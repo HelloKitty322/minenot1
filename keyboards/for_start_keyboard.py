@@ -1,5 +1,5 @@
-from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup
-from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
+from aiogram.types import ReplyKeyboardMarkup
+from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
 
 def start_buttons() -> ReplyKeyboardMarkup:
@@ -10,4 +10,3 @@ def start_buttons() -> ReplyKeyboardMarkup:
     keyboard.button(text='Посетить сайт проекта BSFG')
     keyboard.adjust(4, 1)
     return keyboard.as_markup(resize_keyboard=True)
-
