@@ -7,9 +7,12 @@ CLASSES = {'чародеи': 'debaff', 'тяжелые воины': 'hdd', 'ле
 
 with open('professions.csv', 'r', encoding='UTF-8') as file:
     reader = csv.DictReader(file, delimiter=',')
-    file_list = list(reader)
-    all_professions = list(map(lambda x: x['Название профессии'].lower(), file_list))
+    jobs_data = list(reader)
+    all_professions = [i['Название профессии'].lower() for i in jobs_data]
 
 with open('pics.csv', 'r', encoding='UTF-8') as file:
     reader = csv.DictReader(file)
-    pics_list = list(reader)
+    pics_list = {}
+    for i in reader:
+        pics_list.setdefault(i['Название профессии'], i['Ссылка на картинку'])
+
