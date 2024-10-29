@@ -1,11 +1,12 @@
 import asyncio
 from aiogram import Bot, Dispatcher
-from handlers import answers
-from config import TOKEN
+
+import answers
+import config
 
 
 async def main():
-    bot = Bot(token=TOKEN)
+    bot = Bot(token=config.TOKEN)
     dp = Dispatcher()
     dp.include_routers(answers.router)
     await bot.delete_webhook(drop_pending_updates=True)

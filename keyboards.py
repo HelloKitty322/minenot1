@@ -3,8 +3,8 @@ from aiogram.types import ReplyKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
-from minenot1.collection import CLASSES, RACES
-from minenot1.collection import jobs_data
+from collection import CLASSES, RACES
+from collection import jobs_data
 
 
 def jobs_by_class_keyboard(needed_class) -> ReplyKeyboardMarkup:
